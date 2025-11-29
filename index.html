@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>it's a fun website</title>
+  <title>Fun Meme Generator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>You will get memes here.</h1>
-    <button onclick="getMeme()">Click me</button>
-    <div class="meme"></div>
+    <h1>Random Meme Generator</h1>
+    <div class="buttons">
+      <button onclick="getMeme()">Next Meme</button>
+      <button id="darkModeBtn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <div class="meme">
+      <p class="loading">Click the button to load a meme!</p>
+    </div>
+    <div class="info"></div>
+    <div class="actions">
+      <button id="copyBtn" onclick="copyMemeURL()" disabled>Copy Meme URL</button>
+      <button id="downloadBtn" onclick="downloadMeme()" disabled>Download Meme</button>
+    </div>
   </div>
   <script src="index.js"></script>
 </body>
